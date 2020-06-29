@@ -1,0 +1,31 @@
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+}
+h1 {
+    color: red;
+   
+}
+
+
+table {
+    border: 1px solid #BADA55;
+}
+
+th {
+    background-color: hsla(260, 90%, 85%, 1);
+}
+
+td {
+    background-color: hsla(180, 90%, 85%, 1);;
+}
+
+tfoot th {
+    background-color: hsla(60, 90%, 75%, 1);
+}
+
+.attribute-style {
+  
+    color: hsl(355, 61%, 28%)
+}
+
