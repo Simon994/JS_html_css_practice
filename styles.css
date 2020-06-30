@@ -24,6 +24,18 @@ tfoot th {
     background-color: hsla(60, 90%, 75%, 1);
 }
 
+.code_1 {
+    padding: 0 .25rem;
+    margin: 0 .0625rem;
+    border-radius: .125rem;
+    color: #15141f;
+    background-color: #eae9ed;
+    white-space: normal;
+    vertical-align: initial;
+    font-family: Monaco,Menlo,Ubuntu Mono,Droid Sans Mono,Consolas,monospace;
+    font-size: .9rem;
+}
+
 .attribute-style {
   
     color: hsl(355, 61%, 28%)
