@@ -8,6 +8,25 @@ h1 {
 }
 
 
+/* Flexbox section-specific */
+
+.flex-container {
+    min-height: 350px;
+    border: 2px solid #BADA55;
+    margin: 10px;
+    
+    
+}
+
+.flex-item {
+    background-color: #facade;
+    border: 1px solid black;
+    height: 100px;
+    width: 150px;
+    text-align: center;
+    line-height: 100px;
+}
+
 table {
     border: 1px solid #BADA55;
 }

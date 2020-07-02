@@ -8,7 +8,33 @@
 
     <body>
        
+
+        <h1>The Flexbox Gym</h1>
+        <h2>A place to work out yo' flexbox skills</h2>
+
+        <label for='flex-toggle'>Flex this thing!</label>
+        <input type="radio" name="flex-toggle" id="flex-toggle" value="block">Block container
+        <input type="radio" name="flex-toggle" id="flex-toggle" value="flex">Flex container
+
+        <br/>
+        <br/>
+        <input list='flexbox-properties'>
+        <datalist id="flexbox-properties">
+            <option>justify-content: space-around</option>
+            <option>justify-content: center</option>
+        </datalist>
+   
+        <button id="container-property">Now add a flex-container property!</button>
+  
+        <div class="flex-container">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
        
+
+        <!-- Tables section -->
+
        <h1>Table examples</h1>
        <h2>tags and attributes</h2>
         <table>
@@ -45,7 +71,7 @@
 
         </table>
 
-
+        <!-- Forms section -->
         <h1>Forms</h1>
 
         <p>&ltForm&gt element is used to collect and send info to an external source. Forms can contain various input elements.
@@ -133,8 +159,13 @@
             <p>Setting <code class="code_1">type='submit'</code> for &ltinput&gt will render a submit button:</p>
             <input type="submit" value='Submit your form by clicking here'>
 
-
-
         </form>
+    
+    
+    
+    
+    
+    <script src="script.js"></script>
+    
     </body>
 </html>
