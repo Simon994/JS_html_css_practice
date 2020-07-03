@@ -13,19 +13,22 @@
         <h2>A place to work out yo' flexbox skills</h2>
 
         <label for='flex-toggle'>Flex this thing!</label>
-        <input type="radio" name="flex-toggle" id="flex-toggle" value="block">Block container
+        <input type="radio" name="flex-toggle" id="flex-toggle" value="block" checked='true'>Block container
         <input type="radio" name="flex-toggle" id="flex-toggle" value="flex">Flex container
 
         <br/>
         <br/>
-        <input list='flexbox-properties'>
+        <input list='flexbox-properties' id='flex-css-input' placeholder="Some examples...">
         <datalist id="flexbox-properties">
             <option>justify-content: space-around</option>
             <option>justify-content: center</option>
-        </datalist>
-   
+            <option>justify-content: space-between</option>
+            <option>align-items: center</option>
+            <option>flex-flow: column wrap</option>
+            <option>flex-flow: row wrap</option>
+        </datalist>   
         <button id="container-property">Now add a flex-container property!</button>
-  
+        <button id='property-remove'>Remove this property</button>
         <div class="flex-container">
             <div class="flex-item">Item 1</div>
             <div class="flex-item">Item 2</div>
