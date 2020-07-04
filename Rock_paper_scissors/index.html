@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1{
+    text-align: center;
+}
+
+table {
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid  hsl(291, 93%, 12%);
+}
+
+td {
+    padding: 15px;
+    background-color: hsl(290, 90%, 80%);
+}
+
+ul {
+    margin-top: 0;
+    padding-left: 25px;
+    list-style: none;
+}
+
+button {
+    background-color: hsl(0, 3%, 41%);
+    color: white;
+    margin: 0 15px;
+    height: 50px;
+    width: 100px;
+    border-radius: 7%;
+    font-weight: 600;
+}
+
+.choice {
+    padding: 15px 0;
+    text-align: center;
+}
+
+.outcome-container{
+    text-align: center;
+}
+
+
+
+        </style>
+    </head>
+
+    <body>
+
+<h1>Lapis, Papyrus, Scalpellus</h1>
+    
+<!-- Instructions section -->
+<table>
+    <tr>
+        <td>1</td>
+        <td>Welcome. Those who are about to play, we salute you!</td>
+    </tr>
+
+    <tr>
+        <td>2</td>
+        <td>Rules are simple:</br> Lapis beats Scalpellus; Scalpellus beats Papyrus; Papyrus beats Lapis</td>
+    </tr>
+
+    <tr>
+        <td>3</td>
+        <td>Make your selection below</td>
+    </tr>
+</table>
+
+
+<!-- Buttons for player choice section -->
+<div class='choice'>
+    <button type='button' id="lapis">Lapis</button>
+    <button type='button' id="papyrus">Papyrus</button>
+    <button type='button' id="scalpellus">Scalpellus</button>
+</div>
+
+<!-- Results section -->
+<div class='outcome-container'></div>
+
+
+        <script>
+
+let childPresentFlag = false;
+let outcomeContainerStatement;
+        
+const compareChoices = (e) => {
+                                
+    console.log(childPresentFlag);
+    let playerChosen = e.target.innerHTML;
+    
+    if (childPresentFlag === true) {
+        document.querySelector('.outcome-container').removeChild(outcomeContainerStatement);
+    };
+
+    const choiceOptions = ['Papyrus', 'Scalpellus', 'Lapis'];
+    const computerChooses = () => choiceOptions[Math.floor(Math.random()*3)];
+    let compChosen = computerChooses();
+
+    let result;
+    
+        if (compChosen === playerChosen) {
+                result = "It's a draw!";
+        } else if (compChosen === choiceOptions[0]){
+            if (playerChosen === choiceOptions[1]){
+                result = "Player wins!";
+            } else {result = "Computer wins!"}
+        }
+        else if (compChosen === choiceOptions[1]){
+            if (playerChosen === choiceOptions[0]){
+                result = "Computer wins!";
+            } else {result = "Player wins!"}
+        } 
+        else if (compChosen === choiceOptions[2]){
+            if (playerChosen === choiceOptions[0]){
+                result = "Player wins!";
+            } else {result = "Computer wins!"}
+        }
+
+        let outcomeStatement = `Computer chooses: ${compChosen}. Player chooses: ${playerChosen}. ${result}`;
+        outcomeContainerStatement = document.createElement('p');
+        outcomeContainerStatement.innerHTML = outcomeStatement;
+        document.querySelector('.outcome-container').appendChild(outcomeContainerStatement); 
+        childPresentFlag = true;
+
+        }
+
+const choices = document.querySelectorAll('button');
+choices.forEach(button => button.addEventListener('click', compareChoices));
+
+        </script>
+
+    </body>
+
+
+</html>
