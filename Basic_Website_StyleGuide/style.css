@@ -1,0 +1,143 @@
+@font-face {
+    font-family: 'Covered By Your Grace';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Covered By Your Grace'), local('CoveredByYourGrace'), url(https://fonts.gstatic.com/s/coveredbyyourgrace/v9/QGYwz-AZahWOJJI9kykWW9mD6opopoqXSOSEEQgsiaXVIw.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+
+html {
+    box-sizing: border-box;
+}
+
+
+
+
+.container {
+    border: 1px solid #282A36;
+    width: 90%;
+    margin: 10px auto;
+    height: 150px;
+    padding: 25px 0;
+}
+
+.adjust-height {
+    height: auto;
+}
+
+.container h2 {
+    text-align: center;
+    color: #282A36;
+}
+
+.flex-container {
+    margin: 0 auto;
+    display: flex;
+}
+
+
+.color {
+    width: 100px;
+    height: 75px;
+    margin: 0 10px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#color1 {
+    background-color: #282A36;
+    color: white;
+}
+
+#color2 {
+    background-color: #44475A;
+    color: white;
+}
+
+#color3 {
+    background-color:#44475A;
+    color: white;
+}
+
+
+#color4 {
+    background-color:#8BE9FD;
+    color: #282A36;
+}
+
+
+#color5 {
+    background-color:#6272A4;
+    color: #282A36;
+}
+
+.fonts-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.panel {
+    margin: 10px 10px;
+    padding: 5px;
+}
+
+.panel h3 {
+    text-decoration: underline;
+    font-weight: 700;
+}
+
+#font1 {
+    font-family: 'Covered By Your Grace', cursive;
+}
+
+#font2 {
+    font-family: 'Roboto', sans-serif;
+}
+
+#font3 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+ 
+.styles-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 20px;
+}
+
+.styles h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.styles h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.styles p {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.container-stylehead {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18 px;
+}
