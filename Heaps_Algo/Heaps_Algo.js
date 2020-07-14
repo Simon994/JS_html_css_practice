@@ -11,34 +11,26 @@ function permutations(str) {
     return arr;
   }
 
-
-
-  function heapPermutations(arr, result, n = arr.length){
-    
+  function heapPermutations(arr, n = arr.length){
     if (n===1){
-      result(arr);
+      permutedArr.push(arr.join(''));;
     } else {
       for (let i=1; i<=n; i++){
         
-        heapPermutations(arr, result, n-1);
+        heapPermutations(arr, n-1);
         if(n%2){
           swap(arr, 0, n-1);
         } else {
           swap(arr, i-1, n-1);
         }
       }
-      
     }
 
   }
 
-  const result = function (input){
-    permutedArr.push(input.join(''));
-  }
-
-  heapPermutations(arr, result);
+  heapPermutations(arr);
   permutedArr = [...new Set(permutedArr)];
-  return(permutedArr);
+  return permutedArr;
 
 }
 
