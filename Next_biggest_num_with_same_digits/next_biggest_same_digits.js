@@ -7,7 +7,7 @@ function nextBigger(num){
 
 // function to find a bigger number
 
-    function compare(arr, p = arr.length-1){
+    function compare(arr, p = arr.length-1, tempArr = num.toString().split('')){
       let l = p-1;
       if(p === 0) {
         return result = -1;
@@ -15,8 +15,8 @@ function nextBigger(num){
 
 
       for (let i=l; i>=0; i--){
-      
-        let tempArr = num.toString().split('');
+        console.log(tempArr);
+        //let tempArr = num.toString().split('');
         let moving = tempArr[p];
         tempArr[p] = tempArr[i];
         tempArr[i] = moving;
@@ -55,7 +55,7 @@ function nextBigger(num){
 
             for (let i=l; i>=0; i--){
               let tempArr2 = firstBiggestNum.toString().split('');
-             // console.log(tempArr2);
+             //console.log(tempArr2);
               let moving2 = tempArr2[p];
               tempArr2[p] = tempArr2[i];
               tempArr2[i] = moving2;
@@ -97,10 +97,13 @@ function nextBigger(num){
 
 
 //passes 139 of 150 tests. Currently not working for (examples):
-nextBigger(40783) // Expected: 40837, instead got: 43078
-nextBigger(4206096767844) // Expected: 4206096768447, instead got: 4206404667789
-nextBigger(2786706993) //Expected: 2786709369, instead got: 2786730699
-nextBigger(898220105637321) // Expected: 898220105671233, instead got: 898220110233567
+//nextBigger(40783) // Expected: 40837, instead got: 43078
+ //nextBigger(4206096767844) // Expected: 4206096768447, instead got: 4206404667789 4206096768447
+// nextBigger(2786706993) //Expected: 2786709369, instead got: 2786730699
+// nextBigger(898220105637321) // Expected: 898220105671233, instead got: 898220110233567
+
+
+////
 
 //nextBigger(6633750298); //Expected: 6633750829
 
